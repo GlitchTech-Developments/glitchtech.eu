@@ -1,0 +1,48 @@
+---
+import { SEO } from "astro-seo";
+
+const { title } = Astro.props;
+---
+
+<>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta
+    name="keywords"
+    content="Astro.js,React.js,TypeScript,Tailwindcss, Unreal Engine 5, UE5"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/meta/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/meta/favicon-16x16.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/meta/favicon-32x32.png"
+  />
+  <link rel="icon" type="image/ico" href="/meta/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <SEO
+    title={`${title ? title + " | " : ""}GlitchTech Developments`}
+    description={`${
+      title ? title + " | " : ""
+    }GlitchTech Development | Web, Software, and Game development. I'm currently making games in UE5 and Websites/Webapps in Next.js & Astro.js with a lot of joy!`}
+    openGraph={{
+      basic: {
+        title: `${title ? title + " | " : ""}GlitchTech Developments`,
+        type: "website",
+        image: "/meta/android-chrome-512x512.png",
+      },
+    }}
+  />
+</>
