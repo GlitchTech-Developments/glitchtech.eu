@@ -1,62 +1,24 @@
 ---
 import ThemeToggle from "./themeToggle";
-
-const routes = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about-me" },
-  { title: "Portfolio", href: "/portfolio" },
-];
 ---
 
 <nav
-  class="fixed inset-x-0 top-0 w-full border-b border-black bg-stone-300 p-3 dark:border-primary dark:bg-black"
+  class="fixed inset-x-0 top-0 w-full border-b border-black p-3 dark:border-primary"
 >
   <div class="my-auto flex">
     <div class="navbar-start flex items-center">
-      <a href="/" class="text-xl" rel="prefetch">GlitchTech Developments</a>
+      <a
+        href="/"
+        class="flex flex-wrap gap-1 text-balance text-xl"
+        rel="prefetch"
+      >
+        <strong class="text-primary">GlitchTech</strong><span>
+          Developments
+        </span>
+      </a>
     </div>
-    <div class="navbar-end flex items-center gap-2">
-      <ThemeToggle client:only />
-      <div class="dropdown-end dropdown">
-        <label tabindex="0" class="btn-base-100 rounded-btn btn">Dropdown</label
-        >
-        <ul
-          tabindex="0"
-          id="dropdown-nav-menu"
-          class="dropdown-content menu rounded-box mt-6 flex w-52 flex-col gap-2 border border-black bg-stone-300 px-2 py-3 shadow dark:border-primary dark:bg-black"
-        >
-          {
-            routes.map((route) => {
-              return (
-                <li id={route.href} class="rounded-lg border border-accent">
-                  <a href={route.href} rel="prefetch">
-                    {route.title}
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
-        <script>
-          const menuDropdown = document.getElementById("dropdown-nav-menu");
-          if (menuDropdown) {
-            const menuItems = Array.from(menuDropdown.children);
-
-            if (menuItems && menuItems.length > 0) {
-              menuItems.map((item) => {
-                const altPath = String(window.location.pathname + "/"); // catches route if trailing slash is used
-                if (item.id == window.location.pathname || item.id == altPath) {
-                  item.classList.add("border-red-500");
-                  item.classList.remove("border-accent");
-                } else {
-                  item.classList.add("border-accent");
-                  item.classList.remove("border-red-500");
-                }
-              });
-            }
-          }
-        </script>
-      </div>
+    <div class="min-h-21 navbar-end flex items-center gap-2">
+      <ThemeToggle client:idle />
     </div>
   </div>
 </nav>

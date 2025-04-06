@@ -1,6 +1,5 @@
 ---
 import MetaTags from "./injects/meta.astro";
-import TailwindInject from "./injects/tailwind.astro";
 import ThemeSwitch from "./injects/theme.astro";
 import Navbar from "./navbar/navbar.astro";
 
@@ -10,13 +9,14 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <MetaTags title={title} />
-    <TailwindInject />
     <ThemeSwitch />
   </head>
   <body>
     <main>
       <Navbar />
-      <slot />
+      <div class="pt-16">
+        <slot />
+      </div>
     </main>
   </body>
 </html>
