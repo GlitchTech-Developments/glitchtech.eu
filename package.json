@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/prefetch": "^0.4.1",
     "astro": "^5.6.1",
+    "astro-htaccess": "^0.2.3",
     "lucide-react": "^0.487.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",

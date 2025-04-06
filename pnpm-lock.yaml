@@ -13,6 +13,9 @@ importers:
       astro:
         specifier: ^5.6.1
         version: 5.6.1(@types/node@22.14.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@4.39.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
+      astro-htaccess:
+        specifier: ^0.2.3
+        version: 0.2.3(astro@5.6.1(@types/node@22.14.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@4.39.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       lucide-react:
         specifier: ^0.487.0
         version: 0.487.0(react@19.1.0)
@@ -1448,6 +1451,14 @@ packages:
       {
         integrity: sha512-XajjEtSTJuVRBOrtZ/Siavd4KcH47SEHo0XoZZeYVRF6BODSBqxVdtlfkqYJKM+F4XRUmLDS5ncVTILnQYvvXw==,
       }
+
+  astro-htaccess@0.2.3:
+    resolution:
+      {
+        integrity: sha512-9Rraech/5sZi+3V7SsPdhNzoVdh4iLN/nQ0RACylqPs1+s6k025MKnYHuO7AUjXD0gD9iZcpDX/N3r54N15Zeg==,
+      }
+    peerDependencies:
+      astro: ">= 4.0.0 < 6"
 
   astro-robots-txt@1.0.0:
     resolution:
@@ -5806,6 +5817,10 @@ snapshots:
       - typescript
       - uploadthing
       - yaml
+
+  astro-htaccess@0.2.3(astro@5.6.1(@types/node@22.14.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@4.39.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)):
+    dependencies:
+      astro: 5.6.1(@types/node@22.14.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@4.39.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
 
   astro-robots-txt@1.0.0:
     dependencies:
